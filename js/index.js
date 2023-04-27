@@ -130,7 +130,7 @@ function signUpStoreFunc(e) {
 /* ========================================Login =========================================== */
 /* ========================================================================================= */
 
-function loginFunc(){
+function loginFunc(e){
     const loginEmail = document.querySelector('#login-email-id').value;
     const loginPassword = document.querySelector('#login-password-id').value;
     const loginForm = document.querySelector('#loginForm-id');
