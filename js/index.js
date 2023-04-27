@@ -153,21 +153,21 @@ function loginFunc(){
     return loginResult;
 }
 
-    const loginForm = document.querySelector('#loginForm-id');
-loginForm.addEventListener('submit', e => {
+//     const loginForm = document.querySelector('#loginForm-id');
+// loginForm.addEventListener('submit', e => {
 
-    const signInBtn=document.getElementById('#login-button-id');
+//     const signInBtn=document.getElementById('#login-button-id');
 
-    if(loginFunc()==true){
-        loginForm.submit();
-    }
-    else if(loginFunc()==false){
-        e.preventDefault();
-        alert("login failure");
-    }
-    else{
-        e.preventDefault();
-        alert("error");
-    }
+//     if(loginFunc()==true){
+//         loginForm.submit();
+//     }
+//     else if(loginFunc()==false){
+//         e.preventDefault();
+//         alert("login failure");
+//     }
+//     else{
+//         e.preventDefault();
+//         alert("error");
+//     }
 
-});
+// });
