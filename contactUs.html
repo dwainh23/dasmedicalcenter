@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="img/heart-beat-logo.png"style="background-color:white;">
+    <link rel="stylesheet" href="css/contactUs.css">
+</head>
+<body>
+    <div class="loading" id="loading"></div>
+    <div class="container1">
+        <!--header menu-->
+        <header class="header-menu">
+            <a href="index.html" class="logo-link">
+                <img src="img/heart-beat-logo.png" alt="asd logo" class="logo-img"> 
+            </a>
+            <ul class="nav-list"> 
+                <li><a href="index.html" id="a-id">Home</a></li>
+                <li><a href="gallery.html" id="a-id">Gallery</a></li>
+                <li><a href="doctors.html" id="a-id">Doctors</a></li>
+                <li><a href="aboutUs.html" id="a-id">About us</a></li>
+                <li><a href="contactUs.html" id="a-id">Contact us</a></li>
+                <li><a href="BookAppointment.html"><button id="bookAppointment-id">Book Appointment Now</button></a></li>
+            </ul>
+        </header>
+
+        <!--======================================================================-->
+        <!--==========================Content section=============================-->
+        <!--======================================================================-->
+        <div class="contactUs">
+            <div class="effect">
+                <!-- <h2>Get in touch</h2> -->
+                <div class="container">
+                    <div class="popup">
+                        <p class="text">
+                            <span class="span">G</span>
+                            <span class="span">e</span>
+                            <span class="span">t</span>&nbsp;&nbsp;
+                            <span class="span">i</span>
+                            <span class="span">n</span>&nbsp;&nbsp;
+                            <span class="span">t</span>
+                            <span class="span">o</span>
+                            <span class="span">u</span>
+                            <span class="span">c</span>
+                            <span class="span">h</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="contact form">
+                    <form autocomplete="off" action="" method="post">
+                        <div class="formBox">
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <input type="text" name="f_name" required>
+                                    <label class="label" for="f_name" ><span class="label-text">First Name</span></label>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="text" name="l_name"required>
+                                    <label class="label" for="l_name"><span class="label-text">Last Name</span></label>
+                                </div>
+                            </div>
+                            <div class="row50">
+                                <div class="inputBox">
+                                    <input type="Email" name="email" required>
+                                    <label class="label" for="email"><span class="label-text">Email</span></label>
+                                </div>
+                                <div class="inputBox">
+                                    <input type="tel" name="mobile" required>
+                                    <label class="label" for="mobile"><span class="label-text">Mobile</span></label>
+                                </div>
+                            </div>
+                            
+                            <div class="row50">
+                                <div class=" select-list-box">
+                                    <select class="select-list" id="select-list-id" onclick="selectValue();">
+                                        <option value="select here" disabled selected>Select here </option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value="other">other</option>
+                                    </select>
+                                    <label class="select-label label" >Inquiry type:</label>
+                                </div>
+                            </div>
+                            <div class="row50">
+                                <div class="textArea-inputBox">
+                                    <textarea class="message" required maxlength="200"></textarea>
+                                    <label for="message"class="label-textarea">Message</label>
+                                </div>
+                                <input type="submit" value="send">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact info">
+                    <h3> Contact Information</h3>
+                    <div class="infoBox">
+                        <div>
+                            <span><ion-icon name="location"></ion-icon></span>
+                            <p>Manama, Seef Area <br> Bahrain</p>
+                        </div>
+                        <div>
+                            <span><ion-icon name="mail"></ion-icon></span>
+                            <a href="mailto:DAS@email.com">DAS@email.com</a>
+                        </div>
+                        <div>
+                            <span><ion-icon name="call"></ion-icon></span>
+                            <a href="tel:+97333999432">+973 33999432</a>
+                        </div>
+                        <ul class="sci">
+                            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28630.19888518548!2d50.52264796659656!3d26.236503944257972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49a546b744b6d7%3A0xcc1eeda3e044a96b!2sMedical.bh!5e0!3m2!1sen!2sbh!4v1680234993769!5m2!1sen!2sbh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <!--======================================================================-->
+        <!--===========================footer======================================-->
+        <!--=======================================================================-->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#aboutUs.html">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="contactUs.html">contact us</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="doctors.html">Our Doctors</a></li>
+                            <li><a href="#">Offers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        var loader= document.getElementById("loading");
+        window.addEventListener("load", function(){
+        loader.style.display="none";
+        });
+    </script>
+    <script>
+        function selectValue(){
+            var selectedDoctorName=document.getElementById('select-list-id').value;
+            localStorage.setItem('select-lists', selectedDoctorName);
+            console.log(selectedDoctorName);
+        }
+        
+        </script>
+</body>
+</html>

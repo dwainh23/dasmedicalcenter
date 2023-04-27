@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appointment-submit</title>
+    <link rel="icon" type="image/x-icon" href="img/heart-beat-logo.png"style="background-color:white;">
+    <link rel="stylesheet" href="css/appointment-submit.css">
+</head>
+<body>
+    <div class="loading" id="loading"></div>
+
+    <header class="header-menu">
+        <a href="index.html" class="logo-link">
+            <img src="img/heart-beat-logo.png" alt="asd logo" class="logo-img"> 
+        </a>
+        <ul class="nav-list"> 
+            <li><a href="index.html" id="a-id">Home</a></li>
+            <li><a href="gallery.html" id="a-id">Gallery</a></li>
+            <li><a href="doctors.html" id="a-id">Doctors</a></li>
+            <li><a href="aboutUs.html" id="a-id">About us</a></li>
+            <li><a href="contactUs.html" id="a-id">Contact us</a></li>
+            
+            <!-- <li><a href="BookAppointment.html"><button id="bookAppointment-id">Book Appointment Now</button></a></li> -->
+        </ul>
+    </header>
+<img src="img/brain-pills.svg" class="background-image">
+<!--======================================================================-->
+<!--==========================Content section=============================-->
+<!--======================================================================-->
+    <div class="wrapper">
+        <div id="form-box" class="register" >
+            <h2>Appointment submitted Successfully</h2>
+            <form action="index.html">
+                <div class="input-box">
+                    <span id="submitted-name"></span>
+                    <label>Full Name:</label>
+                </div>
+                <div class="input-box">
+                
+                    <span id="submitted-email"></span>
+                    <label>Email Address:</label>
+                </div>
+                <div class="input-box">
+                    <span id="submitted-number"></span>
+                    <label >Phone Number:</label>
+                </div>
+                <div class="input-box">
+                    <span id="submitted-doctor"></span>
+                    <label >Doctor Name:</label>
+                </div>
+                <div class="input-box date-box">
+                    <span id="submitted-dateTime"></span>
+                    <label class="date-label">Appointment Date & Time:</label>
+                </div>
+                <button type="submit" class="btn" >Return to home page</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="js/appointment-submit.js"></script>
+    <script>
+        var loader= document.getElementById("loading");
+        window.addEventListener("load", function(){
+          loader.style.display="none";
+        });
+      </script>
+</body>
+</html>

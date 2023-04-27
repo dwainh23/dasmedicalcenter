@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="css/BookAppointment.css">
+    <link rel="icon" type="image/x-icon" href="img/heart-beat-logo.png"style="background-color:white;">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        // $.datepicker.setDefaults({
+        // showOn: "both",
+        // buttonImageOnly: true,
+        // buttonImage: "img/calendar.png",
+        // buttonText: "Calendar"
+        // });
+        $( function() {
+        $( "#datepicker" ).datepicker();
+        $( "#anim" ).on( "select", function() {
+            $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+        });
+        } );
+    </script>
+</head>
+<body>
+    
+    <div class="loading" id="loading"></div>
+    <header class="header-menu">
+        <a href="index.html" class="logo-link">
+            <img src="img/heart-beat-logo.png" alt="asd logo" class="logo-img"> 
+        </a>
+        <ul class="nav-list"> 
+            <li><a href="index.html" id="a-id">Home</a></li>
+            <li><a href="gallery.html" id="a-id">Gallery</a></li>
+            <li><a href="doctors.html" id="a-id">Doctors</a></li>
+            <li><a href="aboutUs.html" id="a-id">About us</a></li>
+            <li><a href="contactUs.html" id="a-id">Contact us</a></li>
+            <!-- <li><a href="BookAppointment.html"><button id="bookAppointment-id">Book Appointment Now</button></a></li> -->
+        </ul>
+    </header>
+<img src="img/brain-pills.svg" class="background-image">
+<!--======================================================================-->
+<!--==========================Content section=============================-->
+<!--======================================================================-->
+    <div class="wrapper">
+        <div id="form-box" class="register" >
+            <h2>Make Appointment</h2>
+            <form id="form-box" action="appointment-submit.html" method="get">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" class="name" name="name" id="name">
+                    <label>Full Name</label>
+                    <div class="error"></div>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-open"></ion-icon></span>
+                    <input type="email"  id="email" class="email" name="email">
+                    <label>Email Address</label>
+                    <div class="error"></div>
+                </div>
+                
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="call"></ion-icon></span>
+                    <input type="tel" class="number" name="number" id="number">
+                    <label >Phone Number</label>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-box">
+                    <select class="select-list" id="select-list-id" onclick="selectValue();">
+                        <option value="choose your doctor"disabled selected>choose your doctor</option>
+
+                        <option value="Yu Tiriaq">Yu Tiriaq</option>
+                        <option value="Meredith Harleyr">Meredith Harleyr</option>
+                        <option value="Adisa mohammed">Adisa mohammed</option>
+                        <option value="Sue Yarden">Sue Yarden</option>
+                        <option value="Parker David">Parker David</option>
+                        <option value="Neelam mohana">Neelam mohana</option>
+                        <option value="Gefen Adisa">Gefen Adisa</option>
+                        <option value="Jack Austin">Jack Austin</option>
+                        <option value="David Parker">David Parker</option>
+                    </select>
+                    <label class="select-label" >Doctor Name</label>
+
+                    <div class="error"></div>
+                </div>
+                <div class="input-box date-box">
+                    <input type="text" name="date" class="date" id="datepicker"  >
+                    <label class="date-label">Appointment Date & Time</label>
+                    <div class="output"></div>
+                </div>
+                <button type="submit" class="Bookbtn">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+    <p>
+    <select id="anim" style="display: none;">
+        <option value="show">Show (default)</option>
+        <option value="slideDown">Slide down</option>
+        <option value="fadeIn">Fade in</option>
+        <option value="blind">Blind (UI Effect)</option>
+        <option value="bounce">Bounce (UI Effect)</option>
+        <option value="clip">Clip (UI Effect)</option>
+        <option value="drop">Drop (UI Effect)</option>
+        <option value="fold">Fold (UI Effect)</option>
+        <option value="slide" selected>Slide (UI Effect)</option>
+        <option value>None</option>
+      </select>
+    </p>    
+    <script>
+    var loader= document.getElementById("loading");
+    window.addEventListener("load", function(){
+         loader.style.display="none";
+    });
+</script>
+    <script type="module" src="js/BookAppointment.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module"src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"> </script>
+<script>
+function selectValue(){
+    var selectedDoctorName=document.getElementById('select-list-id').value;
+    localStorage.setItem('select-lists', selectedDoctorName);
+    console.log(selectedDoctorName);
+}
+
+</script>
+
+</html>
