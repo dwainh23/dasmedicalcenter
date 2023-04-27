@@ -159,12 +159,6 @@ loginForm.addEventListener('submit', e => {
     const signInBtn=document.getElementById('#login-button-id');
 
     if(loginFunc()==true){
-        // signInBtn.parentElement.remove('#login-button-id');
-        let nav_list = document.getElementById("nav-list");
-        nav_list.innerHTML += '<input value="Sign out" type="submit" id="login-button-id" class="btnLogin-popup">';
-        console.log(nav_list);
-        alert('login success1');
-       console.log(nav_list);
         loginForm.submit();
     }
     else if(loginFunc()==false){
@@ -177,8 +171,3 @@ loginForm.addEventListener('submit', e => {
     }
 
 });
-function SignOut()
-{
-    localStorage.removeItem('');
-    window.location.href = '#';
-}
