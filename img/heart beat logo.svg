@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="321.417" height="96.565" viewBox="0 0 321.417 96.565">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #ed1c24;
+        stroke: #6d69b0;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke-width: 0.5px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #cbced1;
+        stroke-width: 5px;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: #a087cb;
+        font-family: PerpetuaTitlingMT-Light, Perpetua Titling MT;
+        font-weight: 300;
+      }
+
+      .cls-4 {
+        stroke-width: 4px;
+        font-size: 24px;
+        letter-spacing: 0.255em;
+      }
+
+      .cls-5 {
+        stroke-width: 3px;
+        font-size: 16px;
+      }
+
+      .cls-6 {
+        fill: #c82127;
+      }
+    </style>
+  </defs>
+  <g id="heart_beat_logo" data-name="heart beat logo" transform="translate(92.536 -214.7)">
+    <path id="Path_32" data-name="Path 32" class="cls-1" d="M164.2,277.9" transform="translate(-90.154 -22.411)"/>
+    <path id="Path_34" data-name="Path 34" class="cls-2" d="M168,214.7" transform="translate(-91.501)"/>
+    <path id="Path_35" data-name="Path 35" class="cls-2" d="M168,214.7" transform="translate(-91.501)"/>
+    <path id="Path_36" data-name="Path 36" class="cls-2" d="M168,214.7" transform="translate(-91.501)"/>
+    <path id="Path_33" data-name="Path 33" class="cls-3" d="M38.032,262.713c-63.119,1.162-20.072.065,0,0,1.291-3.743,5.809-20.33,6.583-23.3,1.226-5.615,2.452,12.069,3.162,15.941.774,8.777,2.517,17.232,3.485,28.333,4.453-18.845,4.389-19.749,5.938-25.622-.323,1.1-.129,1.1.71-5.163a6.858,6.858,0,0,1,.194-.9c.258-1.226,1.613,4.84,1.678,4.84a58.429,58.429,0,0,0,2.646,7.1c1.872.065,2.969,0,4.389,0,0,0,.839.968,3.614,7.422l4.26-29.882,3.872,26.4,3.614-.129,2.194-.129,3.55-.065.71-2.9c1.291-8.39,2.969-16.845,4.26-25.235.194-1.226.387-2.388.581-3.614.581,4.97,1.162,9.939,1.678,14.973a85.194,85.194,0,0,0,1.678,9.423,26.173,26.173,0,0,0,1.162,4.776c.516,1.678,1.743,4.453,2.323,6.454l5.55-20.911c.452,2.194,2.517,12.456,3.162,14.715a42.544,42.544,0,0,0,5.615-.129c.968-2.517,4.2-11.617,3.808-10.649-1.613,4.453.645-1.549.645-1.549,2.775,11.746,2.711,11.875,2.775,11.746.9.065,3.485.065,4.9.065l.258-.71.968-3.421c.968,4.711,2.194,10.584,3.356,15.231.645-3.162,1.678-7.616,2.84-11.294,7.71,0,57.253.5,80.661.709s8.76.088,12.969.13c20.96.211,37.227.381,37.227.381s51.873.4,58.824.264" transform="translate(-95 11.88)"/>
+    <g id="Group_19" data-name="Group 19" transform="translate(56.815 245.823)">
+      <text id="ASD" class="cls-4" transform="translate(0 23)"><tspan x="0" y="0">ASD</tspan></text>
+    </g>
+    <text id="Medical" class="cls-5" transform="translate(51.146 294.693)"><tspan x="0" y="0">Medical</tspan></text>
+    <g id="Group_20" data-name="Group 20" transform="translate(124.218 275.511)">
+      <path id="Path_37" data-name="Path 37" class="cls-6" d="M352.6,306.747V303.4l33.747.1v3.347Z" transform="translate(-352.6 -303.4)"/>
+    </g>
+    <rect id="Rectangle_10" data-name="Rectangle 10" class="cls-6" width="3.304" height="32.166" transform="translate(140.134 260.975)"/>
+    <text id="Center" class="cls-5" transform="translate(159.548 294.693)"><tspan x="0" y="0">Center</tspan></text>
+  </g>
+</svg>

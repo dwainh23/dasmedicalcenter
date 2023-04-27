@@ -1,0 +1,815 @@
+
+    
+    *, ::after, ::before {
+        margin:0;
+        border: 0;
+        padding: 0;
+        outline: 0;
+        list-style: none;
+        text-decoration: none;
+        box-sizing: border-box;  
+    }
+    
+    /*=================================================================================================*/
+    /*============================================Log in button section================================*/
+    /*=================================================================================================*/
+    /*==================================================================================================*/
+    /*=================================================Variables Deceleration==========================*/
+    /*=================================================================================================*/
+        :root{
+            --color-11:#46589299;
+            --transition: all 400ms ease;
+            --color-1:rgb(70, 88, 146);
+            --color-6:rgb(84, 61, 123);
+            --color-2:rgb(84, 109, 166);
+            --color-5:rgb(109, 85, 147);
+            --color-3:#bbc1c6;
+            --color-4:rgb(150, 142, 175);
+            --color-7:rgb(162, 143, 192);
+            --color-55:rgba(109, 85, 147, 0.9);
+            --color-66: rgba(84, 61, 123, 0.85);
+            --color-111:rgba(70, 88, 146, 0.365);
+            --c1: #974dae;
+            --c2: #a666b9;
+            --c3: #b589c5;
+            --c4: #c399d1;
+
+        }
+        body{
+            background: linear-gradient(180deg, var(--color-66) -108.35%, rgba(63, 0, 156, 0) 153.96%); 
+            
+        }
+.loading{
+  position:relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 250px auto;
+  background: linear-gradient(45deg, transparent, transparent 0%, var(--color-66));
+  animation: rotate linear infinite 2s;
+}
+.loading:before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+    bottom: 6px;
+    background:#bfb6ce99;
+  border-radius: 50%;
+  z-index: 5;
+}
+.loading:after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent, transparent 0%, var(--color-66));
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(35px);
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+        /*=================================================================================================*/
+        /*==========================================Header Section==========================================*/
+        /*=================================================================================================*/
+        
+        header{
+            position: fixed;
+            top: 0;
+            z-index: 21;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px 0%;
+            background: transparent;
+            background-color: var(--color-66);
+          }
+          .logo-img{
+            height: 60px;
+          }
+          
+          .nav-list{
+            display: inline-flex;
+            transform: translateX(-60px);
+          }
+          .nav-list li{
+            margin-left: 60px;
+            margin-top: 20px;
+          }
+        .nav-list li a{
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: all 0.55s ease;
+            text-decoration: none;
+          
+          }
+          .nav-list li a:hover{
+            border-bottom: 3px solid white;
+          }
+          #bookAppointment-id{
+            float:right;
+            top: 10px;
+            right:-150px;
+            border: none;
+            height: 40px;
+            width: 170px;
+            color: white;
+            font-size: 12px;
+            position: absolute;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+            background-color:  var(--color-7);
+              
+              }
+            
+          #bookAppointment-id:hover{
+            height: 40px;
+            width: 160px;
+            font-size: 10px;
+            color: var(--color-6) ;
+            transition: var(--transition);
+            background-color: var(--color-4);
+          }
+/*=================================================================================================*/
+/*==========================================content Section==========================================*/
+/*=================================================================================================*/
+        .contactUs{
+            position: relative;
+            padding: 130px 200px;
+            
+        }
+        .contactUs .title{
+            display:flex;
+            font-size: 2em;
+            align-items: center;
+            justify-content: center;
+        }
+        .contactUs .title h2{
+            color:#ffffff;
+            font-weight: 500px;
+            
+        }
+        .form{
+            grid-area: form;
+        }
+        .info{
+            grid-area: info;
+            padding: 40px;
+
+
+        }
+
+        .map{
+            grid-area: map;
+
+        }
+        .contact{
+            background-color: white;  
+            background: transparent;
+            width: 500px;
+       }
+       
+        .box{
+            position: relative;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 5fr 4fr;
+            grid-template-areas:  
+            "form info"
+            "form map";
+            margin-top: 50px;
+            grid-gap: 10px;
+        }
+        .contact h3{
+            color: var(--color-6);
+            font-weight: 500;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+/*=================================================================================================*/
+/*==========================================Form Section==========================================*/
+/*=================================================================================================*/
+/*===========================================message section========================================*/
+.formBox .row50{
+    display: flex;
+    gap: 60px;
+    width: 100%;
+}
+.textArea-inputBox{
+    position: relative;
+    width: 100%;
+}
+.message{
+    width: 400px;
+    height: 100px;
+    color: var(--color-6);
+    outline:none;
+    background-color: inherit;
+    font-size: 15px;
+    border: 2px solid var(--color-1);
+    border-radius: 10px;
+    left: 0;
+    outline:none;
+    transition: .5s;
+    padding: 20px;
+    transform: translateY(10px);
+}
+.textArea-inputBox label{
+    position: absolute;
+    left: 10px;
+    padding: 10px;
+    top: 10px;
+    pointer-events: none;
+    font-size: 16px;
+    background-color: inherit;
+    font-size: 20px;
+    /* width: 100%; */
+    font-weight: 700;
+    pointer-events: none;
+    color: var(--color-66);
+    transition: .5s;
+}
+.textArea-inputBox textarea:valid~label,
+.textArea-inputBox textarea:focus~label{
+    color: var(--color-66);
+    transform: translate(10px, -7px)!important;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0 15px;
+    background:  #BFB6CE; 
+    border-left: 1px solid;
+    border-right: 1px solid;
+    letter-spacing: 0.2em;
+}
+.textArea-inputBox textarea:valid,
+.textArea-inputBox textarea:focus{
+    border: 4px solid var(--color-1);
+}
+.formBox input[type="submit"]{
+    position: absolute;
+    background: var(--color-66);
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 30px;
+    /* border-radius: 50px; */
+    top: 350px;
+    left: 0px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+    height: 52px;
+    width: 100%;
+    max-width: 150px;
+    color: var(--color-66);
+    overflow: hidden;
+}
+.inputBox input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: var(--color-66);
+    line-height: 52px;
+    outline: 0;
+    background-color: inherit;
+    padding-top: 30px;
+    font-size: 15px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.inputBox .label{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background-color: inherit;
+    left: 0;
+    pointer-events: none;
+    border-bottom: 2px solid var(--color-1);
+}
+.inputBox .label::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 4px solid var(--color-1);
+    left:0;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+}
+.inputBox .label-text{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    transition: all 0.2s ease;
+}
+.inputBox input:focus+.label .label-text,
+.inputBox input:valid+.label .label-text{
+font-size: 18px;
+font-weight: 700;
+color: var(--color-66);
+transform: translateY(-100%);
+}
+
+.inputBox input:focus + .label::after,
+.inputBox input:valid + .label::after{
+    transform: translateX(0%);
+}
+.select-list-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+    height: 62px;
+    width: 300px;
+    color: var(--color-66);
+    overflow: hidden;
+}
+.row50 .select-list{
+    background:transparent;
+    border-color: transparent;
+    width: 100%; 
+    position: relative;
+    font-weight: 600;
+    font-size: 15px;
+    color:  var(--color-6);    
+    top: 30px;
+    left: 0;
+}
+
+.row50 .select-label {
+    position: absolute;
+    left: 0px;
+    margin-top: 20px;
+    padding: 0px;
+    top: 5px;
+    transition: all 0.2s ease;
+}
+.row50 .select-label::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    border-bottom: 4px solid var(--color-1);
+    left:0;
+    top: 35px;
+    bottom: -5px;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+}
+.row50 select:focus+ .select-label ,
+.row50 select:valid+ .select-label {
+font-size: 18px;
+font-weight: 700;
+color: var(--color-66);
+transform: translateY(-100%);
+}
+
+.row50 select:focus + .select-label::after,
+.row50 select:valid + .select-label::after{
+    transform: translateX(0%);
+}
+.select-list .s-option{
+    background-color:var(--color-3);
+}
+
+/*===========================================info section========================================*/
+        .info{
+            background: var(--color-7);
+        }
+        .info h3{
+            color: var(--color-1);
+        }
+        .info .infoBox div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .info .infoBox div span{
+            min-width: 40px;
+            height: 40px;
+            color:white;
+            background: var(--color-111);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .info .infoBox div p{
+            color: var(--color-1);
+            font-size: 1.1em;
+        }
+        .info .infoBox div a{
+            color: var(--color-1);
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .sci{
+            margin-top: 40px;
+            display: flex;
+        }
+        .sci li{
+            list-style: none;
+            margin-right: 15px;
+        }
+        .sci li a{
+            font-size: 2em;
+            color: white;
+        }
+        .sci li a:hover{
+            color: #ffffff33;
+        }
+
+
+/*===========================================map section========================================*/
+    .map{
+        padding:0;
+    }
+    .map iframe{
+        width: 100%;   
+        height: 100%;
+
+    }
+/*=================================================================================================*/
+/*==========================================footer Section==========================================*/
+/*=================================================================================================*/
+        .row{
+            display: flex;
+            flex-wrap:wrap;
+            background-color: var(--color-1);
+            
+        }
+        .footer{
+            background-color: var(--color-1);
+            padding: 10px 0px;
+        }
+        .footer-col{
+            width: 30%;
+            padding: 0px 100px;
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color:var(--color-7);
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+        }
+/* =============================================head title============================= */
+.effect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup{
+    top: 60px;
+    width: 100%;
+    padding: 0px 0;
+    text-align: center;
+}
+.text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+.span{
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    font-family:'oswald',sans-serif;
+    font-size: 70px;
+    font-weight: bolder;
+    text-align: center;
+    letter-spacing: 10px;
+    transition: .5s;
+    text-shadow:    0 5px 0 rgb(0,0,0),
+                    0 10px 40px rgb(0,0,0)E,
+                    0 20px 30px rgb(0,0,0),
+                    0 30px 20px rgb(0,0,0);
+}
+/* .span:hover{
+    text-shadow: -10px 10px 0 rgb(0,0,0),
+    0 10px 40px  rgba(0,0,0,0.2),
+    0 20px 30px  rgba(0,0,0,0.5),
+    20px 20px 20px rgba(0,0,0,0.5);
+} */
+/* =======================G===================== */
+
+.span:nth-child(1):before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'G';
+
+}
+
+.span:nth-child(1):after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'G';
+    z-index: 2;
+}
+/* =======================e===================== */
+
+
+.span:nth-child(2)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'E';
+
+}
+.span:nth-child(2)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'E';
+    z-index: 2;
+}
+
+/* =======================t===================== */
+
+.span:nth-child(3)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'T';
+
+}
+.span:nth-child(3)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'T';
+    z-index: 2;
+}
+
+/* =======================i===================== */
+
+.span:nth-child(4)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'I';
+
+}
+.span:nth-child(4)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'I';
+    z-index: 2;
+}
+
+/* =======================n===================== */
+
+.span:nth-child(5)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    content: 'N';
+    z-index: 1;
+
+}
+.span:nth-child(5)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'N';
+    z-index: 2;
+}
+
+/* =======================t===================== */
+
+.span:nth-child(6)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'T';
+
+}
+.span:nth-child(6)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'T';
+    z-index: 2;
+}
+
+/* =======================o===================== */
+.span:nth-child(7)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'O';
+
+}
+
+.span:nth-child(7)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'O';
+    z-index: 2;
+}
+
+/* =======================u===================== */
+
+.span:nth-child(8)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'U';
+
+}
+
+.span:nth-child(8)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'U';
+    z-index: 2;
+}
+/* =======================c===================== */
+.span:nth-child(9)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'C';
+
+}
+
+.span:nth-child(9)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'C';
+    z-index: 2;
+}
+
+/* =======================h===================== */
+.span:nth-child(10)::before{
+    top: -5px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: var(--color-111);
+    transition: .5s;
+    z-index: 1;
+    content: 'H';
+    
+}
+    
+.span:nth-child(10)::after{
+    top: -10px;
+    left: 0;
+    position: absolute;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    color: white;
+    transition: .5s;
+    content: 'H';
+    z-index: 2;
+}
+.span:hover::before{
+    top: -10px;
+    left: 10px;
+}
+.span:hover::after{
+    top: -20px;
+    left: 20px;
+}

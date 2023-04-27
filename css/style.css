@@ -1,0 +1,528 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:cursive;
+  list-style: none;
+  text-decoration: none;
+}
+:root{
+  --color-11:#46589299;
+  --transition: all 400ms ease;
+  --color-1:rgb(70, 88, 146);
+  --color-6:rgb(84, 61, 123);
+  --color-2:rgb(84, 109, 166);
+  --color-5:rgb(109, 85, 147);
+  --color-3:#bbc1c6;
+  --color-4:rgb(150, 142, 175);
+  --color-7:rgb(162, 143, 192);
+  --color-55:rgba(109, 85, 147, 0.9);
+  --color-66: rgba(84, 61, 123, 0.85);
+  --color-111:rgba(70, 88, 146, 0.365);
+}
+.loading{
+  position:relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 250px auto;
+  background: linear-gradient(45deg, transparent, transparent 0%, var(--color-66));
+  animation: rotate linear infinite 2s;
+}
+.loading:before{
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  background: white;
+  bottom: 6px;
+  border-radius: 50%;
+  z-index: 5;
+}
+.loading:after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent, transparent 100%, var(--color-66));
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(35px);
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+header{
+  position: fixed;
+  right: 50px;
+  top: 0;
+  z-index: 21;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 9%;
+  background: transparent;
+}
+.logo-img{
+  height: 80px;
+}
+
+.nav-list{
+  display: flex
+}
+.nav-list li{
+  margin-left: 60px;
+  margin-top: 40px;
+}
+.nav-list li a{
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.55s ease;
+  text-decoration: none;
+
+}
+.nav-list li a:hover{
+  border-bottom: 2px solid white;
+}
+
+.header-menu #login-button-id{
+  float:right;
+  top: 45px;
+  right:50px;
+  border: none;
+  height: 40px;
+  width: 120px;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+  background-color:  var(--color-66);
+}
+
+#login-button-id:hover{
+  height: 40px;
+  width: 90px;
+  font-size: 16px;
+  color: var(--color-6) ;
+  transition: var(--transition);
+  background-color: var(--color-4);
+}
+
+/*============================================ Account====================================== */
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  right: -500px;
+  top: -560px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px #00000080;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+  z-index: 3211;
+}
+
+.wrapper.active{
+  height: 500px;
+}
+.wrapper .form-box{
+  width: 100%;
+  padding: 40px;
+}
+.wrapper.active .form-box.login{
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+.wrapper .form-box.login{
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.register{
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.form-box h2{
+  position: relative;
+  top: -5px;
+  font-size: 40px;
+  color: var(--color-66);
+  align-items: center;
+}
+#l-input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid var(--color-66);
+  margin: 30px 0;
+}
+#r-input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid var(--color-66);
+  margin: 30px 0;
+  margin: 10px;
+
+}
+#l-input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-35%);
+  font-size:1em;
+  color: var(--color-6);
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+#r-input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size:1em;
+  color: var(--color-6);
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+#l-input-box input:focus~label{
+  top: 10px;
+}
+
+#r-input-box input:focus~label{
+  top: 10px;
+}
+
+#l-input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: var(--color-1);
+  font-weight: 600;
+  padding: 30px 30px 0 5px;
+}
+#r-input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: var(--color-1);
+  font-weight: 600;
+  padding: 30px 30px 0 5px;
+}
+#l-input-box .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: var(--color-6);
+  line-height: 57px;
+}
+#r-input-box .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: var(--color-6);
+  line-height: 57px;
+}
+.wrapper .icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: var(--color-1);
+  font-size: 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 211;
+}
+.remember-forgot{
+  font-size: 0.9em;
+  color: var(--color-1);
+  font-weight: 500;
+  margin: 35px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input{
+  accent-color: var(--color-111);
+  margin-right: 3px;
+}
+.remember-forgot a{
+  color: var(--color-1);
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: wavy underline;
+  text-underline-position: under;
+}
+#ARbtn{
+  width: 100%;
+  height: 45px;
+  background: var(--color-1);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+}
+#ALbtn{
+  width: 100%;
+  height: 45px;
+  background: var(--color-1);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+}
+.login-registration{
+  font-size: .9em;
+  color: var(--color-1);
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+
+}
+.login-registration{
+  font-size: .9em;
+  color: var(--color-1);
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+
+}
+
+.login-registration p a{
+  color: var(--color-1);
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-registration p a:hover{
+  text-underline-position: under;
+  text-decoration: underline;
+}
+
+
+/*============================================ Account====================================== */
+.hero{
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(245.59deg, var(--color-6)0%, var(--color-3)28.53%,var(--color-1)75.52%);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2,1fr) ;
+  align-items: center;
+  gap: 2rem;
+}
+section{
+  padding: 0 19%;
+}
+
+.hero-text h1{
+  font-family: 'permanent Marker', cursive;
+  font-size: 50px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px 0;
+}
+
+.hero-text p{
+  color: white;
+  font-size: 18px;
+  margin-bottom: 40px;
+
+}
+.hero-img img{
+  width:500px ;
+  height: auto;
+}
+.hero-text a #read-button-id{
+  display: inline-block;
+  color: white;
+  background: var(--color-6);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .55s ease-in-out;
+  padding: 10px 20px;
+  margin: 0 0px 10px;
+
+}
+.hero-text a #bookAppointment-id{
+  display: inline-block;
+  color: white;
+  background: var(--color-6);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .55s ease-in-out;
+  padding: 10px 30px;
+  margin: 0px 15px;
+  
+  }.hero-text a #gallery-button-id{
+    display: inline-block;
+    color: white;
+    background: var(--color-6);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .55s ease-in-out;
+    padding: 10px 30px;
+    margin: 0px 15px;
+    
+    }
+  .hero-text a #bookAppointment-id:hover{
+  background: var(--color-7);
+  border: 1px solid white;
+  transform: translateX(8px);
+  }
+
+  .hero-text a #gallery-button-id:hover{
+    background: var(--color-7);
+    border: 1px solid white;
+    transform: translateX(8px);
+    }
+.hero-text a #login-button-id:hover{
+background: var(--color-7);
+border: 1px solid white;
+transform: translateX(8px);
+}
+.hero-text a #read-button-id:hover{
+  background: var(--color-7);
+  border: 1px solid white;
+  transform: translateX(8px);
+  }
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 9%;
+}
+.scroll-down i{
+
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  color: white;
+  background: var(--color-11);
+  border-radius: 30px;
+  transition: all .50s ease-in-out;
+}
+.scroll-down i:hover{
+  transform: translateY(-5px);
+}
+
+.gallery-slider p{
+  color: white;
+  font-size: 18px;
+}
+  .gallery-slider h1{
+    font-family: 'permanent Marker', cursive;
+    font-size: 50px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px 0;
+  }
+.gallery-slider a button{
+  display: inline-block;
+  color: white;
+  background: var(--color-6);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all .55s ease-in-out;
+  padding: 10px 15px;
+  margin: 10px 15px 10px -12px;
+}
+.gallery-slider a button:hover{
+  background: var(--color-7);
+  border: 1px solid white;
+  transform: translateX(8px);
+  }
+  #l-input-box.success{ 
+    border-bottom: 2px solid #09c372;
+}
+#r-input-box.success{ 
+  border-bottom: 2px solid #09c372;
+}
+
+#l-input-box.error{
+  border-bottom: 2px solid#ff3860;
+  margin:0 0 30px 0;
+}
+#r-input-box.error{
+    border-bottom: 2px solid#ff3860;
+    margin:0 0 20px 0;
+}
+
+#l-input-box .error {
+    position: absolute;
+    transform: translateY(55px);
+    color: #ff3860;
+    font-size: 10px;
+    height: 10px;
+    visibility: visible;
+    z-index: 222222;
+}
+
+#r-input-box .error {
+  position: absolute;
+  transform: translateY(5px);
+  color: #ff3860;
+  font-size: 12px;
+  height: 10px;
+  visibility: visible;
+  z-index: 222222;
+}

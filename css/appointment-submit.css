@@ -1,0 +1,281 @@
+
+*, ::after, ::before {
+    margin:0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;  
+}
+:root{
+    --color-11:#46589299;
+    --transition: all 400ms ease;
+    --color-1:rgb(70, 88, 146);
+    --color-6:#543d7b;
+    --color-2:rgb(84, 109, 166);
+    --color-5:rgb(109, 85, 147);
+    --color-3:#bbc1c6;
+    --color-4:rgb(150, 142, 175);
+    --color-7:rgb(162, 143, 192);
+    --color-55:rgba(109, 85, 147, 0.9);
+    --color-66: rgba(84, 61, 123, 0.85);
+    --color-111:rgba(70, 88, 146, 0.365);
+}
+.loading{
+    position:relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 250px auto;
+    background: linear-gradient(45deg, transparent, transparent 0%, var(--color-66));
+z-index: 2221;
+animation: rotate linear infinite 2s;
+  }
+  .loading:before{
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color:#bfb6ce99;
+    border-radius: 50%;
+    z-index: 5;
+  }
+  .loading:after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(45deg, transparent, transparent 0%, var(--color-66));
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(35px);
+  }
+  @keyframes rotate{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+  
+    }
+  }
+  body{
+    height: 100vh;
+justify-content: center;
+background: linear-gradient(360deg, var(--color-66) -28.35%, rgba(63, 0, 156, 0) 153.96%); 
+background-size:contain;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+align-items: center;
+z-index: -11111111111111111111111111;
+
+}
+::-webkit-calendar-picker-indicator{    
+position: absolute;
+background-image: url('/img/calendar.png') ;
+fill: var(--color-6);
+top: 60%;
+right: 8px;
+font-size: 24px;
+line-height: 57px;
+cursor: pointer;
+/*     opacity: 0;
+*/}
+/*=================================================================================================*/
+/*==========================================Header Section==========================================*/
+/*=================================================================================================*/
+header{
+  position: fixed;
+  top: 0;
+  z-index: 21;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0%;
+  background: transparent;
+  background-color: var(--color-66);
+}
+.logo-img{
+  height: 60px;
+}
+
+.nav-list{
+  display: inline-flex;
+  transform: translateX(-60px);
+}
+.nav-list li{
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.nav-list li a{
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.55s ease;
+  text-decoration: none;
+
+}
+.nav-list li a:hover{
+  border-bottom: 3px solid white;
+}
+#bookAppointment-id{
+  float:right;
+  top: 10px;
+  right:-150px;
+  border: none;
+  height: 40px;
+  width: 170px;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+  background-color:  var(--color-7);
+    
+    }
+  
+#bookAppointment-id:hover{
+  height: 40px;
+  width: 160px;
+  font-size: 10px;
+  color: var(--color-6) ;
+  transition: var(--transition);
+  background-color: var(--color-4);
+}
+/* ====================================================================== */
+/* ====================================================================== */
+/* ====================================================================== */
+.background-image {
+position: relative;
+left: 200px;
+top: 100px;
+width: 900px;
+height: 550px;
+justify-content: center;
+align-items: center;
+}
+.wrapper{
+position: absolute;
+width: 350px;
+right: 460px;
+top: 110px;
+background: transparent;
+border: 2px solid rgba(255, 255, 255, 0.5);
+border-radius: 20px;
+backdrop-filter: blur(20px);
+box-shadow: 0 0 30px rgba(0, 0, 0,0.5);
+justify-content: center;
+align-items: center;
+z-index: 1;
+}
+
+.wrapper #form-box{
+width: 100%;
+padding: 20px 50px;
+}
+.wrapper.active{
+height: 320px;
+}
+
+#form-box h2{
+position: relative;
+top: 0px;
+font-size: 20px;
+font-weight: 900;
+color: var(--color-66);
+align-items: center;
+}
+
+.select-list{
+    background:transparent;
+    border-color: transparent;
+    width: 100%; 
+    position: relative;
+     top:25px;
+    font-weight: 600;
+    font-size: 15px;
+    color:  var(--color-6);
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--color-66);
+    margin: 30px 0;
+    margin: 10px;
+    
+  }
+  .input-box label{
+    position: absolute;
+    top: 30%;
+    left: 5px;
+    transform: translateY(-35%);
+    font-size:1em;
+    color: var(--color-6);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+.wrapper.active-popup{
+    transform: scale(1);
+  }
+  
+#submitted-name,
+#submitted-email,
+#submitted-number,
+#submitted-doctor{
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--color-1);
+    font-weight: 600;
+    padding: 30px 30px 0 5px;
+    margin-top: 10px;
+}
+#submitted-dateTime{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--color-1);
+    font-weight: 600;
+    margin-top: 30px;
+    top: 30px;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: var(--color-1);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+
+.btn .btn-secondary .dropend{
+    width: 200px;
+    background: #543d7b;
+}
