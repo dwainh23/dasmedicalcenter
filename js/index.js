@@ -133,6 +133,7 @@ function signUpStoreFunc(e) {
 function loginFunc(){
     const loginEmail = document.querySelector('#login-email-id').value;
     const loginPassword = document.querySelector('#login-password-id').value;
+    const loginForm = document.querySelector('#loginForm-id');
 
     var data=JSON.parse(localStorage.getItem('email'));
     console.log(data);
@@ -140,12 +141,17 @@ function loginFunc(){
     if(data===null){
         alert("null data");
         loginResult=false;
+        e.preventDefault();
+        
     }
     else if(loginEmail==data.email && loginPassword==data.password){
         loginResult=true;
+        loginForm.submit();
+        
         alert("login success");
     }
     else if(loginEmail!=data.email && loginPassword!=data.password){
+        e.preventDefault();
         loginResult=false;
         alert("login failed. wrong Email or password");
 
