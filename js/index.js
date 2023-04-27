@@ -145,15 +145,15 @@ function loginFunc(){
         
     }
     else if(loginEmail==data.email && loginPassword==data.password){
-        loginResult=true;
-        loginForm.submit();
         
         alert("login success");
+        loginResult=true;
+        loginForm.submit();
     }
     else if(loginEmail!=data.email && loginPassword!=data.password){
+        alert("login failed. wrong Email or password");
         e.preventDefault();
         loginResult=false;
-        alert("login failed. wrong Email or password");
 
     }
     return loginResult;
