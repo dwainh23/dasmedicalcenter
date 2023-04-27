@@ -141,39 +141,37 @@ function loginFunc(e){
     if(data===null){
         alert("null data");
         loginResult=false;
-        e.preventDefault();
         
     }
     else if(loginEmail==data.email && loginPassword==data.password){
         
         alert("login success");
         loginResult=true;
-        loginForm.submit();
     }
     else if(loginEmail!=data.email && loginPassword!=data.password){
         alert("login failed. wrong Email or password");
-        e.preventDefault();
         loginResult=false;
 
     }
     return loginResult;
 }
 
-//     const loginForm = document.querySelector('#loginForm-id');
-// loginForm.addEventListener('submit', e => {
+    const loginForm = document.querySelector('#loginForm-id');
+loginForm.addEventListener('submit', e => {
 
-//     const signInBtn=document.getElementById('#login-button-id');
+    const signInBtn=document.getElementById('#login-button-id');
 
-//     if(loginFunc()==true){
-//         loginForm.submit();
-//     }
-//     else if(loginFunc()==false){
-//         e.preventDefault();
-//         alert("login failure");
-//     }
-//     else{
-//         e.preventDefault();
-//         alert("error");
-//     }
+    if(loginFunc()==true){
+        alert("login");
+        loginForm.submit();
+    }
+    else if(loginFunc()==false){
+        e.preventDefault();
+        alert("login failure");
+    }
+    else{
+        e.preventDefault();
+        alert("error");
+    }
 
-// });
+});
